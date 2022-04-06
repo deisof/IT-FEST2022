@@ -31,7 +31,6 @@ $(function() {
         nav:true,
         dots: false,
         navText: ['<img src="img/arrow_left.svg">', '<img src="img/arrow_right.svg">'],
-        startPosition: 1,
         responsive:{
             0:{
                 items:1

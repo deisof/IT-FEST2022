@@ -216,7 +216,7 @@ h3 {
 .collage {
     width: 50%;
     height: 540px;
-    background: url('../img/img5.jpg') no-repeat left top / 80% 70%;
+    background: url('../img/back_img.jpg') no-repeat left top / 80% 70%;
     position: absolute;
     left: 0;
 }
