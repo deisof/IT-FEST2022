@@ -70,6 +70,12 @@ h3 {
     margin-bottom: 127px;
 }
 
+
+.nav-small {
+    padding: 30px;
+    margin: 0;
+}
+
 .logo {
 
 }
@@ -362,6 +368,14 @@ h3 {
 .footer-logo {
     margin-top: 109px;
     margin-bottom: 109px;
+}
+
+.img-fluid {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    box-shadow: 0 0 25px;
 }
 
 /* profile_page */
