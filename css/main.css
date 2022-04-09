@@ -1,4 +1,5 @@
 body {
+    overflow-x: hidden;
     font-family: 'Fira Sans', sans-serif;
     color: #808080;
     font-size: 18px;
