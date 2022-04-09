@@ -4,7 +4,7 @@ $(function() {
         margin:30,
         nav:true,
         dots: false,
-        navText: ['<img src="img/arrow_left.svg">', '<img src="img/arrow_right.svg">'],
+        navText: ['<img src="../img/arrow_left.svg">', '<img src="../img/arrow_right.svg">'],
         responsive:{
             0:{
                 items:1
@@ -30,7 +30,7 @@ $(function() {
         margin:0,
         nav:true,
         dots: false,
-        navText: ['<img src="img/arrow_left.svg">', '<img src="img/arrow_right.svg">'],
+        navText: ['<img src="../img/arrow_left.svg">', '<img src="../img/arrow_right.svg">'],
         responsive:{
             0:{
                 items:1
