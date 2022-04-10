@@ -44,3 +44,13 @@ $(function() {
         }
     });
 });
+
+$(window).load(function(){
+    if(window.location.hash){
+      $('a[href="'+window.location.hash+'"]').trigger('click');
+    }
+  });
+  
+  $(document).on('click', 'a[data-toggle="tab"]', function(){
+    window.location.hash = $(this).attr('href');
+  })
