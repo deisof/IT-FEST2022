@@ -29,12 +29,7 @@ def logout():
     return redirect("/")
 
 
-
-# @blueprint.route('/register', methods=['GET', 'POST'])
-# def reg():
-#     return render_template("registration.html")
-
-@blueprint.route('/register', methods=['GET', 'POST'])
+@blueprint.route('/registration', methods=['GET', 'POST'])
 def reg_run():
     if request.method == 'POST':
         db_sess = db_session.create_session()
