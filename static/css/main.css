@@ -94,6 +94,7 @@ h3 {
     font-size: 60px;
     letter-spacing: -0.01em;
     line-height: 1.2em;
+    margin-top: -30px;
 }
 
 .offer-cont__text {
@@ -116,7 +117,7 @@ h3 {
 
 .video {
     position: absolute;
-    left: 0;
+    left: 10%;
     bottom: 10%;
     width: 40%;
     height: 40%;
