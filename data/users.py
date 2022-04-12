@@ -6,17 +6,14 @@ from data.db_session import SqlAlchemyBase
 
 
 class User(SqlAlchemyBase, UserMixin):
-    __tablename__ = 'users'
+    __tablename__ = 'user'
 
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True, autoincrement=True)
-    surname = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    name = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    patronymic = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    login = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    name = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=True)
+    description = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=True)
+    connection = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=True)
     email = sqlalchemy.Column(sqlalchemy.String, index=True, unique=True, nullable=True)
     hashed_password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    privilege_id = sqlalchemy.Column(sqlalchemy.Integer, sqlalchemy.ForeignKey("privilege.id"))
-    privilege = orm.relation('Privilege')
 
     def __repr__(self):
         return f'<User> {self.id} {self.name} {self.email}'
