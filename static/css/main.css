@@ -71,6 +71,13 @@ h3 {
     margin-bottom: 127px;
 }
 
+.nav-footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
 
 .nav-small {
     padding: 30px;
@@ -363,14 +370,13 @@ h3 {
 }
 
 .footer {
-    height: 242px;
+    height: 100px;
     background: #515151;
-    margin-top: 136px;
+    
 }
 
 .footer-logo {
-    margin-top: 109px;
-    margin-bottom: 109px;
+    width: 40%;
 }
 
 .img-fluid {
