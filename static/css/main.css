@@ -363,7 +363,7 @@ h3 {
 }
 
 .footer {
-    height: 240px;
+    height: 242px;
     background: #515151;
     margin-top: 136px;
 }
@@ -420,4 +420,10 @@ h3 {
     border-radius: 18px;
     border: 3px solid #512DA5;
     background-color: #fff;
+}
+
+/* bot widget */
+
+.justwidget--asst-pic svg path {
+    fill: #3726F2 !important;
 }
