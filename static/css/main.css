@@ -382,24 +382,9 @@ h3 {
 
 /* profile_page */
 
-.card-no-border .card {
-    margin-bottom: 30px;
-}
-
-
-.pro-img {
-    margin-top: -80px;
-    margin-bottom: 20px
-}
-
-.img-circle {
-    border-radius: 100%;
-}
-
-.vh-border {
-    border: 3px solid #000;
-    border-top: 0;
-    border-bottom: 0;
+.avatar {
+    height: 200px;
+    width: 200px;
 }
 
 /* form */
@@ -424,7 +409,15 @@ h3 {
 /* bot widget */
 
 .justwidget--asst-pic svg path {
-    fill: #3726F2 !important;
+    fill: transparent !important;
+}
+
+.justwidget--asst-pic {
+    background-image: url('../img/bot-gradient.svg') !important;
+}
+
+.justwidget--asst-pic svg {
+    display: none;
 }
 
 .paint {
