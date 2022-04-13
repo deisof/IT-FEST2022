@@ -84,19 +84,6 @@ h3 {
     margin: 0;
 }
 
-.logo {
-
-}
-
-.search {
-    
-}
-
-.menu {
-   
-
-}
-
 .offer-cont__title {
     font-size: 60px;
     letter-spacing: -0.01em;
@@ -106,10 +93,6 @@ h3 {
 
 .offer-cont__text {
     margin: 30px 0 56px;
-}
-
-.offer-cont__btn {
-
 }
 
 .hero {
@@ -147,18 +130,10 @@ h3 {
     padding-top: 117px;
 }
 
-.about {
-
-}
-
 .about__title {
     font-size: 38px;
     margin-bottom: 30px;
 
-}
-
-.about__text {
-    
 }
 
 .about__author {
@@ -185,10 +160,6 @@ h3 {
     letter-spacing: 0.25em;
     color: #8F8F8F;
     margin-bottom: 40px;
-}
-
-.section-title__heading {
-    
 }
 
 .serv-list {
@@ -348,10 +319,6 @@ h3 {
 
 .contributer__title {
     margin-bottom: 10px;
-}
-
-.contributer__title__desc {
-
 }
 
 .cont-photo {
