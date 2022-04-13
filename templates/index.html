@@ -17,35 +17,9 @@
 
 <body>
     <header class="header">
-        <!-- Navbar -->
-        <div class="nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <img src="/static/img/logo.svg" alt="Gravity" class="logo">
-                    </div>
-                    <div class="col-md-3 ms-auto">
-                        <button class="menu ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                            <img src="/static/img/menu.svg" alt="Menu Gravity">
-                        </button>                        
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
-        <!-- Menu -->
-
-        <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Заголовок</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <a href="/" class="link">Главная</a></br>
-                <a href="/login" class="link">Вход</a></br>
-                <a href="/registration" class="link">Регистрация</a></br>
-              </div>
-          </div>
+        {% include 'header.html' %}
                 
 
         <div class="offer">
@@ -347,13 +321,7 @@
         </div>
     </section>
     <section class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col d-flex justify-content-center">
-                    <img class="footer-logo" src="/static/img/footer-logo.svg" alt="Gravity">
-                </div>
-            </div>
-        </div>
+        {% include 'footer.html' %}
     </section>
     <!-- Chat bot -->
     <script src="https://bot.jaicp.com/chatwidget/pfrFBUXL:a3f242e45202dbbc423e21b2c9006998475b0bb6/justwidget.js?force=true" async></script>
