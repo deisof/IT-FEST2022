@@ -1,0 +1,37 @@
+<!-- Navbar -->
+<div class="nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="/static/img/logo.svg" alt="Gravity" class="logo">
+            </div>
+            <div class="col-md-3 ms-auto">
+                <button class="menu ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                    <img src="/static/img/menu.svg" alt="Menu Gravity">
+                </button>                        
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Menu -->
+
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/registration">Регистрация</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Вход</a>
+          </li>
+        </ul>
+      </div>
+  </div>
