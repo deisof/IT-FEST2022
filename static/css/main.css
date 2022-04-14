@@ -406,24 +406,11 @@ h3 {
     background-color: #fff;
 }
 
-/* bot widget */
-
-.justwidget--asst-pic svg path {
-    fill: transparent !important;
-}
-
-.justwidget--asst-pic {
-    background-image: url('../img/bot-gradient.svg') !important;
-}
-
-.justwidget--asst-pic svg {
-    display: none;
-}
 
 .paint {
     background: url('../img/bg-color.png') no-repeat right top;
-    background-size: 60% 100%;
-    width: 80%;
+    background-size: 100% 100%;
+    width: 50%;
     height: 100vh;
     position: absolute;
     right: 0;
