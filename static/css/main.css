@@ -85,7 +85,7 @@ h3 {
 }
 
 .offer-cont__title {
-    font-size: 60px;
+    font-size: 40px;
     letter-spacing: -0.01em;
     line-height: 1.2em;
     margin-top: -30px;
@@ -99,10 +99,10 @@ h3 {
     background: url('../img/img1.jpg') no-repeat right top;
     background-size: 80% 100%;
     width: 55%;
-    height: 80vh;
+    height: 85vh;
     position: absolute;
     right: 0;
-    top: 132px;
+    top: 100px;
 }
 
 .video {
@@ -131,19 +131,19 @@ h3 {
 }
 
 .about__title {
-    font-size: 38px;
+    font-size: 35px;
     margin-bottom: 30px;
 
 }
 
 .about__author {
-    background: url('../img/author.jpg') no-repeat left center;
+    background: url('../img/team_foto.jpg') no-repeat left center;
     padding: 7px 0 7px 96px;
     margin-top: 61px;
 }
 
 .about__name {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .about__dop {
@@ -151,7 +151,7 @@ h3 {
 }
 
 .services {
-    padding-top: 142px;
+    padding-top: 112px;
 }
 
 .section-title__label {
@@ -164,7 +164,7 @@ h3 {
 
 .serv-list {
     color: #8D8D8D;
-    margin-top: -175px;
+    margin-top: -90px;
 }
 
 .serv-list__item {
@@ -176,7 +176,7 @@ h3 {
 }
 
 .works-carousel {
-    margin-top: 99px;
+    margin-top: 70px;
 }
 
 .owl-theme .owl-dots, .owl-theme .owl-nav {
@@ -196,7 +196,7 @@ h3 {
 }
 
 .result {
-    padding-top: 219px;
+    padding-top: 170px;
 }
 
 .collage {
@@ -255,7 +255,7 @@ h3 {
 }
 
 .works {
-    padding-top: 283px;
+    padding-top: 253px;
 }
 
 .work-tabs {
@@ -263,7 +263,7 @@ h3 {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.3em;
-    margin-top: -30px;
+    margin-top: -10px;
 }
 
 .work-tabs__item a {
@@ -278,7 +278,7 @@ h3 {
 
 .works-wrap {
     flex-wrap: wrap;
-    margin-top: 108px;
+    margin-top: 98px;
 }
 
 .works-wrap__item {
@@ -314,7 +314,7 @@ h3 {
 }
 
 .testimonials {
-    padding-top: 248px;
+    padding-top: 150px;
 }
 
 .contributer__title {
@@ -410,4 +410,8 @@ h3 {
 
 .item-img {
     border-radius: 25px;
+}
+
+.nav-link {
+    color: #151515;
 }
