@@ -15,6 +15,10 @@ blueprint = flask.Blueprint('card_api', __name__, template_folder='templates')
 def index():
     return render_template("index.html")
 
+@blueprint.route("/profile", methods=['GET', 'POST'])
+def profile():
+    return render_template("profile.html")
+
 
 # @blueprint.route("/shop", methods=['GET', 'POST'])
 # @login_required
