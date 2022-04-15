@@ -54,3 +54,4 @@ $(window).load(function(){
   $(document).on('click', 'a[data-toggle="tab"]', function(){
     window.location.hash = $(this).attr('href');
   })
+
