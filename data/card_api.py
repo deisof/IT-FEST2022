@@ -45,8 +45,6 @@ def change():
 # def Card_func():
 #     return render_template('check.html')
 
-=======
->>>>>>> 48f3aa544300e357175a76017841a05c0d690ce7
 # @blueprint.route("/Carding/<int:Card_id>", methods=['GET', 'POST'])
 # def Carding(Card_id):
 #     form = Ready()
