@@ -362,14 +362,20 @@ h3 {
 }
 
 .item-profile {
-    border: 3px solid #000;
+    border: none;
     border-radius: 25px;
+    background-color: #F4F4F4;
     margin: 10px;
     padding: 10px;
 }
 
+.profile-item {
+    width: 100%;
+    margin: 10px;
+}
+
 .margin-container {
-    margin: 10%;
+    margin: 0 10%;
 }
 
 .item-head {
@@ -378,6 +384,7 @@ h3 {
 
 .item-img {
     border-radius: 25px;
+    margin: 10px;
 }
 
 /* form */
