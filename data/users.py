@@ -1,3 +1,4 @@
+from email.policy import default
 import sqlalchemy
 from flask_login import UserMixin
 from sqlalchemy import orm
@@ -10,10 +11,10 @@ class User(SqlAlchemyBase, UserMixin):
 
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True, autoincrement=True)
     name = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=True)
-    description = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=True)
-    connection = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=True)
+    description = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=True, default="")
+    tel = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=True, default="")
+    telegram = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=True, default="")
     email = sqlalchemy.Column(sqlalchemy.String, index=True, unique=True, nullable=True)
-    avatar = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=True)
     hashed_password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
 
     def __repr__(self):
