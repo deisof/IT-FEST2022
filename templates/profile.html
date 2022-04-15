@@ -23,11 +23,11 @@
         <div class="margin-container">
             <div class="row justify-content-md-center">
                 <div class="col-md-1 col-sm-2">
-                    <img src="../static/img/team_foto.jpg" class="rounded-circle avatar" />
+                    <img src="../static/img/team_foto.jpg" id="avatar" class="rounded-circle avatar" />
                 </div>
                 <div class="col-md-4 col-sm-10">
-                    <h3>Имя</h3>
-                    <p>Подробная информация</p>
+                    <h3>{{ current_user.name }}</h3>
+                    <p>Подробная информация {{ current_user.description }}</p>
 
                 </div>
                 <div class="col-md-2">
@@ -37,8 +37,9 @@
                     <h3>
                         Контакты
                     </h3>
-                    <a href="tel:+7777777777">+7 (777) 77-77-77</a>
-                    <a href="https://t.me/beminezxc">Телеграм</a>
+                    <!-- <a href="tel:+7777777777">Телефон {{ current_user.tel }}</a> -->
+                    <a>Телефон {{ current_user.tel }}</a>
+                    <a>Телеграм {{ current_user.telegram }}</a>
                 </div>
             </div>
             <div class="row list_of_sections">
@@ -64,7 +65,7 @@
                     
                     <div class="col-md-9">
                         <h3>
-                            Загруженные работы
+                            Загруженные вещи
                         </h3>
                     </div>
                     <div class="col-md-3">

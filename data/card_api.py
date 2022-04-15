@@ -31,18 +31,6 @@ def catalog():
 def add_card():
     return render_template("add_card.html")
 
-
-# @blueprint.route("/shop", methods=['GET', 'POST'])
-# @login_required
-# def shop():
-#     return render_template("shop.html")
-
-
-# @blueprint.route("/check")
-# def Card_func():
-#     return render_template('check.html')
-
-
 # @blueprint.route("/Carding/<int:Card_id>", methods=['GET', 'POST'])
 # def Carding(Card_id):
 #     form = Ready()
@@ -60,16 +48,6 @@ def add_card():
 
 #         return redirect('/history')
 #     return render_template('Carding.html', form=form, Card=Card)
-
-
-# @blueprint.route("/about")
-# def about():
-#     return render_template('about.html')
-
-
-# @blueprint.route("/help")
-# def helper():
-#     return render_template('help.html')
 
 
 # @blueprint.route("/active")
@@ -146,9 +124,3 @@ def add_card():
 #     else:
 #         abort(404)
 #     return redirect('/active')
-
-
-# @blueprint.route('/data_cam/<path:filename>', methods=['GET', 'POST'])
-# @login_required
-# def download(filename):
-#     return send_file(filename)
