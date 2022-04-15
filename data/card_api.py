@@ -19,6 +19,11 @@ def index():
 def profile():
     return render_template("profile.html")
 
+@blueprint.route("/shop", methods=['GET', 'POST'])
+def shop():
+    return render_template("shop.html")
+
+
 
 # @blueprint.route("/shop", methods=['GET', 'POST'])
 # @login_required
