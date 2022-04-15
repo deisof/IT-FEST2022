@@ -99,13 +99,13 @@
             <div class="col-md-5 ms-auto d-flex justify-content-betweeen">
                 <ul class="serv-list serv-list_left">
                     <li class="serv-list__item">
-                        Новая жизнь
+                        — Новая жизнь
                     </li>
                     <li class="serv-list__item">
-                        Уникальный дизайн
+                        — Уникальный дизайн
                     </li>
                     <li class="serv-list__item">
-                        Получить опыт
+                        — Получить опыт
                     </li>
                 </ul>
             </div>
@@ -113,13 +113,13 @@
                 <div class="col">
                     <div class="owl-carousel owl-theme works-carousel">
                         <div class="item">
-                            <img src="/static/img/New life back.jpg" alt="work">
+                            <img src="/static/img/New life back.jpg" onClick="imgsrc1();" id="image1" alt="work">
                         </div>
                         <div class="item">
-                            <img src="/static/img/Unique back.jpg" alt="work">
+                            <img src="/static/img/Unique back.jpg" onClick="imgsrc2();" id="image2" alt="work">
                         </div>
                         <div class="item">
-                            <img src="/static/img/Do art back.jpg" alt="work">
+                            <img src="/static/img/Do art back.jpg" onClick="imgsrc3();" id="image3" alt="work">
                         </div>
                     </div>
                 </div>
@@ -321,6 +321,31 @@
         async>
         </script>
     <!-- Scripts -->
+    <script language="javascript">
+        var i1 = 0;
+        var image1 = document.getElementById("image1");
+        var imgs1 = new Array('/static/img/New life desc.jpg', '/static/img/New life back.jpg');
+        function imgsrc1() {
+            i1++; i1 %= imgs1.length;
+            image1.src = imgs1[i1];
+        };
+
+        var i2 = 0;
+        var image2 = document.getElementById("image2");
+        var imgs2 = new Array('/static/img/Unique desc.jpg', '/static/img/Unique back.jpg');
+        function imgsrc2() {
+            i2++; i2 %= imgs2.length;
+            image2.src = imgs2[i2];
+        };
+
+        var i3 = 0;
+        var image3 = document.getElementById("image3");
+        var imgs3 = new Array('/static/img/Do art desc.jpg', '/static/img/Do art back.jpg');
+        function imgsrc3() {
+            i3++; i3 %= imgs3.length;
+            image3.src = imgs3[i3];
+        };
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
