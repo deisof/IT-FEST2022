@@ -367,6 +367,7 @@ h3 {
     background-color: #F4F4F4;
     margin: 10px;
     padding: 10px;
+    margin-top: 30px;
 }
 
 .profile-item {
@@ -435,4 +436,12 @@ h3 {
     -o-transform: translate(0px, -3px);
     -ms-transform: translate(0px, -3px);
     transform: translate(0px, -3px);
+}
+
+.profile_information {
+    margin-top: -60px;
+}
+
+.list_of_sections {
+    margin-top: 50px;
 }

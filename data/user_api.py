@@ -37,7 +37,6 @@ def reg_run():
             return render_template('registration.html', title='Регистрация',
                                    message="Такой пользователь уже есть")
         user = User()
-        print(request.form['email'], request.form['password'])
         user.name = request.form['name']
         user.email = request.form['email']
         user.set_password(request.form['password'])

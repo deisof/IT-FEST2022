@@ -13,6 +13,7 @@ class User(SqlAlchemyBase, UserMixin):
     description = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=True)
     connection = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=True)
     email = sqlalchemy.Column(sqlalchemy.String, index=True, unique=True, nullable=True)
+    avatar = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=True)
     hashed_password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
 
     def __repr__(self):
