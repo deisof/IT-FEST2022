@@ -31,6 +31,20 @@ def catalog():
 def add_card():
     return render_template("add_card.html")
 
+@blueprint.route("/change", methods=['GET', 'POST'])
+def change():
+    return render_template("change.html")
+
+# @blueprint.route("/shop", methods=['GET', 'POST'])
+# @login_required
+# def shop():
+#     return render_template("shop.html")
+
+
+# @blueprint.route("/check")
+# def Card_func():
+#     return render_template('check.html')
+
 # @blueprint.route("/Carding/<int:Card_id>", methods=['GET', 'POST'])
 # def Carding(Card_id):
 #     form = Ready()
