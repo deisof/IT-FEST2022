@@ -23,6 +23,13 @@ def profile():
 def shop():
     return render_template("shop.html")
 
+@blueprint.route("/catalog", methods=['GET', 'POST'])
+def catalog():
+    return render_template("catalog.html")
+
+@blueprint.route("/add_card", methods=['GET', 'POST'])
+def add_card():
+    return render_template("add_card.html")
 
 
 # @blueprint.route("/shop", methods=['GET', 'POST'])
