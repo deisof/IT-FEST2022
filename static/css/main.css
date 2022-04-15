@@ -17,6 +17,10 @@ ul, li {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 .vh-dependent {
     height: 35vh;
     display: flex;
