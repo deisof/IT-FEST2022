@@ -442,6 +442,60 @@ h3 {
     margin-top: -60px;
 }
 
+.catalog_information {
+    margin-top: -250px;
+}
+
 .list_of_sections {
     margin-top: 50px;
+}
+
+.work-tabs__item_catalog {
+    color: #424242;
+    border-radius: 45px;
+    background-color: #9472DF;
+    padding: 2%;
+}
+
+.tabs-link {
+    color: #424242; 
+}
+
+.add_card_block {
+    height: 50vh;
+    margin: 20% 5%;
+}
+
+.center-block {
+    margin-top: 0;
+    display: block;
+    background: #818181 no-repeat center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-block-right {
+    margin-top: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-load {
+    background: #4737FF;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 8px;
+    padding: 12px 12px;
+    display: inline;
+    border-radius: 0;
+    letter-spacing: 0.3em;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+textarea {
+    padding: 10px;
+    font-size: 8px;
 }
