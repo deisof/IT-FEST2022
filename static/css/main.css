@@ -337,9 +337,12 @@ h3 {
 }
 
 .footer {
+    position: relative;
     height: 200px;
     background: #515151;
-    
+    margin: 0%;
+    margin-top: 50px;
+    padding: 4%;
 }
 
 .footer-logo {
@@ -498,4 +501,14 @@ h3 {
 textarea {
     padding: 10px;
     font-size: 8px;
+}
+
+.nav-footer {
+    padding-top: 0px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
 }
