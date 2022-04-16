@@ -29,19 +29,20 @@
                 </div>
                 <div class="col-md-4 col-sm-10">
                     <h3>{{ current_user.name }}</h3>
-                    <p>Подробная информация {{ current_user.description }}</p>
+                    <p>Подробная информация</p>
+                    <p>{{ current_user.description }}</p> 
 
                 </div>
                 <div class="col-md-2">
                     <div class="edit-button justify-content-between">
-                        <a href="/edit"><img class="icon" src="../static/img/pen-to-square-solid.svg" /></a>
+                        <a href="/change"><img class="icon" src="../static/img/pen-to-square-solid.svg" /></a>
                     </div>
                     <h3>
                         Контакты
                     </h3>
                     <!-- <a href="tel:+7777777777">Телефон {{ current_user.tel }}</a> -->
-                    <a>Телефон {{ current_user.tel }}</a>
-                    <a>Телеграм {{ current_user.telegram }}</a>
+                    <p>Телефон {{ current_user.tel }}</p>
+                    <p>Телеграм {{ current_user.telegram }}</p>
                 </div>
             </div>
             <div class="row list_of_sections">
@@ -63,19 +64,20 @@
             </div>
             <div class="item-profile">
                 <div class="item-head">
-                <div class="row">
-                    
-                    <div class="col-md-9">
-                        <h3>
-                            Загруженные вещи
-                        </h3>
-                    </div>
-                    <div class="col-md-3">
+                    <div class="row">
 
-                        <button type="button" class="btn offer-cont__btn btn-block col-12">
-                            Загрузить
-                        </button>
-                    </div>
+                        <div class="col-md-9">
+                            <h3>
+                                Загруженные вещи
+                            </h3>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="/add_card">
+                                <button type="button" class="btn offer-cont__btn btn-block col-12">
+                                    Загрузить
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -92,18 +94,20 @@
             </div>
             <div class="item-profile">
                 <div class="item-head">
-                <div class="row">
-                    
-                    <div class="col-md-9">
-                        <h3>
-                            Мои работы
-                        </h3>
-                    </div>
-                    <div class="col-md-3">
-                        <button type="button" class="btn offer-cont__btn btn-block col-12">
-                            Загрузить
-                        </button>
-                    </div>
+                    <div class="row">
+
+                        <div class="col-md-9">
+                            <h3>
+                                Мои работы
+                            </h3>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="/add_card">
+                                <button type="button" class="btn offer-cont__btn btn-block col-12">
+                                    Загрузить
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -125,7 +129,9 @@
         </section>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
         <script src="../js/jquery-3.6.0.min.js"></script>
         <script src="../js/owl.carousel.min.js"></script>
         <script src="../js/main.js"></script>

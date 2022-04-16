@@ -1,9 +1,10 @@
 import flask
 from flask import render_template, request
-from flask_login import login_user, login_required, logout_user
+from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.utils import redirect
 from data import db_session
 from data.users import User
+from flask_restful import abort
 
 blueprint = flask.Blueprint('user_api', __name__, template_folder='templates')
 
@@ -45,3 +46,21 @@ def reg_run():
         session.commit()
         return redirect('/login')
     return render_template("registration.html")
+
+
+@blueprint.route("/change", methods=['GET', 'POST'])
+def change():
+    session = db_session.create_session()
+    user = session.query(User).filter(User.id == current_user.id).first()
+    if request.method == 'POST':
+        if user:
+            user.description = request.form['description']
+            user.name = request.form['name']
+            user.tel = request.form['tel']
+            user.telegram = request.form['telegram']
+
+            session.commit()
+            return redirect('/profile')
+        else:
+            abort(404)
+    return render_template("change.html")

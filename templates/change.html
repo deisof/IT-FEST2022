@@ -34,19 +34,21 @@
                             <div class="col-12 col-md-12 col-lg-12 col-xl-8">
                                 <div class="card-body text-center">
                                     <h3 class="fw-bold mb-5 text-center text-uppercase">Изменить</h3>
-                                    <form method="POST" action="registration">
-                                        <input type="name" name="name" id=""
+                                    <form method="POST" action="change">
+                                        <input type="name" name="name" id="name" value="{{ current_user.name }}"
                                             class="form-control form-control-lg col-sm-12 mb-4" placeholder="Имя" />
-                                        <textarea type="info" name="info" id=""
-                                            class="form-control form-control form-control-lg col-12 my-4" placeholder="Дополнительная информация"></textarea>
-                                        <input type="phone" name="phone" id=""
-                                            class="form-control form-control-lg col-sm-12 mb-4" placeholder="Телефон" />    
-                                        <input type="text" name="text" id=""
-                                            class="form-control form-control-lg col-sm-12 mb-4" placeholder="Телеграм" />
+                                        <textarea type="info" name="description" id=""
+                                            class="form-control form-control form-control-lg col-12 my-4"
+                                            placeholder="Дополнительная информация">{{ current_user.description }}</textarea>
+                                        <input type="phone" name="tel" id="" value="{{ current_user.tel }}"
+                                            class="form-control form-control-lg col-sm-12 mb-4" placeholder="Телефон" />
+                                        <input type="text" name="telegram" id="" value="{{ current_user.telegram }}"
+                                            class="form-control form-control-lg col-sm-12 mb-4"
+                                            placeholder="Телеграм" />
                                         <button class="btn button-purple col-sm-12 mb-4" type="submit"
                                             name="register">Изменить</button>
                                     </form>
-                                    
+
 
                                 </div>
                             </div>
