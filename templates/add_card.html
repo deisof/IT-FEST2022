@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="shortcut icon" href="../static/img/favicon.png" type="image/png">
-
 </head>
 
 <body>
@@ -32,9 +31,16 @@
             </div>
             <div class="col-md-6">
                 <div class="add_card_block center-block-right">
-                    <form action="">
-                        <textarea class="form-control form-control form-control-lg col-6 my-4" placeholder="Дополнительная информация"></textarea>
-                        <button class="btn button-purple">Подтвердить</button>
+                    <form action="add_card", method="POST">
+                        <select name="tag_sel">
+                            <option>Футболка</option>
+                            <option>Кроссовки</option>
+                            <option>Толстовка</option>
+                            <option>Шоппер</option>
+                            <option>Джинсы</option>
+                        </select>
+                        <textarea class="form-control form-control form-control-lg col-6 my-4" placeholder="Дополнительная информация" name="info"></textarea>
+                        <button class="btn button-purple" type="submit">Подтвердить</button>
                     </form>                  
                 </div>
             </div>
