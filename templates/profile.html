@@ -27,19 +27,20 @@
                 </div>
                 <div class="col-md-4 col-sm-10">
                     <h3>{{ current_user.name }}</h3>
-                    <p>Подробная информация {{ current_user.description }}</p>
+                    <p>Подробная информация</p>
+                    <p>{{ current_user.description }}</p> 
 
                 </div>
                 <div class="col-md-2">
                     <div class="edit-button justify-content-between">
-                        <a href="/edit"><img class="icon" src="../static/img/pen-to-square-solid.svg" /></a>
+                        <a href="/change"><img class="icon" src="../static/img/pen-to-square-solid.svg" /></a>
                     </div>
                     <h3>
                         Контакты
                     </h3>
                     <!-- <a href="tel:+7777777777">Телефон {{ current_user.tel }}</a> -->
-                    <a>Телефон {{ current_user.tel }}</a>
-                    <a>Телеграм {{ current_user.telegram }}</a>
+                    <p>Телефон {{ current_user.tel }}</p>
+                    <p>Телеграм {{ current_user.telegram }}</p>
                 </div>
             </div>
             <div class="row list_of_sections">
