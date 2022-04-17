@@ -87,7 +87,9 @@
                     {% for item in cards %}
                         
                             <div class="col-md-4 col-sm-12">
-                                <img src="{ item.img_adress }" class="td-img" width="50px" height="50px">
+                                <a href="/show/{{ item.id }}"><button type="button" class="btn offer-cont__btn btn-block col-12">
+                                    Увидеть
+                                </button></a>                             
                             </div>
                             <div class="col-md-2 col-sm-12">
                                 <div class="col-md-8">{{ item.information }}</div>
