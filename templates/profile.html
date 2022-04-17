@@ -92,7 +92,7 @@
                         <img class="col-md-12 item-img" src="../static/img/video.jpg" />
                     </div>
                 </div> -->
-                
+
                 <table class="mycards-table">
                     <tr>
                         <th>Описание</th>
@@ -101,7 +101,11 @@
                     {% for item in cards %}
                     <tr>
                         <td>{{ item.information }}</td>
-                        <td>{{ item.is_finished }}</td>
+                        {% if item.is_finished == 1 %}
+                        <td>Закрыта</td>
+                        {% else %}
+                        <td>Открыта</td>
+                        {% endif %}
                     </tr>
                     {% endfor %}
                 </table>
