@@ -1,6 +1,6 @@
 from asyncio.windows_events import NULL
 import flask
-from flask import render_template, request, Response, abort, make_response
+from flask import render_template, request, Response, abort, make_response, url_for
 from flask_login import current_user, login_required
 from sqlalchemy import null
 from werkzeug.utils import redirect
@@ -25,9 +25,11 @@ def index():
 @login_required
 def profile():
     session = db_session.create_session()
-    cards = session.query(Card).filter(Card.id_creator == current_user.id).all()
+    cards = session.query(Card).filter(
+        Card.id_creator == current_user.id).all()
     sp = session.query(Card).all()
-    card_done = session.query(Card).filter(Card.id_creator == current_user.id, Card.is_finished == True).all()
+    card_done = session.query(Card).filter(
+        Card.id_creator == current_user.id, Card.is_finished == True).all()
     return render_template("profile.html", cards=cards, card_done=card_done)
 
 
@@ -60,39 +62,27 @@ def add_card():
         session.add(card)
         session.commit()
 
-        return redirect('/card_img')
+        return redirect('/card_img/' + str(card.id))
     return render_template("add_card.html")
 
 
-@blueprint.route("/card_img", methods=['GET', 'POST'])
-@login_required
-def card_img():
-    img = Card.get_img()
-    if not img:
-        return ""
-    else:
-        h = make_response(img)
-        h.headers['Content-Type'] = 'image/jpg'
-    return h
-
-
-@blueprint.route("/upload<int:Card_id>", methods=['GET', 'POST'])
-@login_required
-def upload(Card_id):
-    session = db_session.create_session()
-    card = session.query(Card).filter(Card.id == Card_id).first()
-
+@blueprint.route('/card_img/<int:Card_id>', methods=['POST', 'GET'])
+def sample_file_upload(Card_id):
     if request.method == 'POST':
+        session = db_session.create_session()
+        card = session.query(Card).filter(Card.id == Card_id).first()
         file = request.files['file']
-        if file and current_user.verifyExt(file.filename):
-            img = file.read()
+        img = file.read()
+        
+        binary = sqlite3.Binary(img)
+        print(binary)
+        card.img_adress = binary
 
-            binary = sqlite3.Binary(img)
-            card.img_adress = binary
+        session.commit()
+        return redirect('/profile')
+    return render_template("card_img.html")
 
-            session.commit()
-            return redirect('/profile')
-    return render_template("add_card.html")
+
 
 # @blueprint.route("/Carding/<int:Card_id>", methods=['GET', 'POST'])
 # def Carding(Card_id):
@@ -119,16 +109,6 @@ def upload(Card_id):
 #     Card_st = session.query(Card).filter(Card.login_student == current_user.login, Card.is_finished == 0).all()
 #     Card_te = session.query(Card).filter(Card.login_teacher == current_user.login, Card.is_finished == 0).all()
 #     return render_template('active.html', Card_st=Card_st, Card_te=Card_te)
-
-
-# @blueprint.route("/history")
-# def history():
-#     session = db_session.create_session()
-#     Card = session.query(Card).filter(Card.login_student == current_user.login, Card.is_finished == 1).all()
-#     Card1 = session.query(Card).filter(Card.login_teacher == current_user.login, Card.is_finished == 1).all()
-#     Card.extend(Card1)
-
-#     return render_template('history.html', Card=Card)
 
 
 # @blueprint.route('/edit_Card/<int:Card_id>', methods=['GET', 'POST'])
