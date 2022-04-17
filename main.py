@@ -11,6 +11,7 @@ app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 login_manager = LoginManager()
 login_manager.init_app(app)
 api = Api(app)
+MAX_CONTENT_LENGTH = 1024 * 1024
 
 
 def main():
