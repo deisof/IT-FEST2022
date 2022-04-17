@@ -361,7 +361,8 @@ h3 {
 }
 
 .edit-button {
-    width: 20px;
+    width: 30px;
+    margin: 0;
 }
 
 .icon {
