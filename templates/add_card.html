@@ -20,7 +20,7 @@
 
     {% include 'header.html' %}
 
-      
+
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -32,7 +32,7 @@
             <div class="col-md-6">
                 <div class="add_card_block center-block-right">
                     <form action="add_card", method="POST">
-                        <select class="form-control form-control form-control-lg col-6 my-4" name="tag_sel">
+                        <select class="form-select form-select-lg mb-3 form-control-lg col-6 my-4" name="tag_sel">
                             <option>Футболка</option>
                             <option>Кроссовки</option>
                             <option>Толстовка</option>
@@ -41,7 +41,7 @@
                         </select>
                         <textarea class="form-control form-control form-control-lg col-6 my-4" placeholder="Дополнительная информация" name="info"></textarea>
                         <button class="btn button-purple" type="submit">Подтвердить</button>
-                    </form>                  
+                    </form>
                 </div>
             </div>
         </div>
