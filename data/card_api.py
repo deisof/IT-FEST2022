@@ -1,5 +1,5 @@
 import flask
-from flask import render_template, request, Response, abort
+from flask import render_template, request, Response, abort, make_response
 from flask_login import current_user, login_required
 from werkzeug.utils import redirect
 from data import db_session
@@ -8,6 +8,7 @@ from data.tag import Tag
 import string
 import secrets
 from flask import send_file
+from main import app
 
 blueprint = flask.Blueprint('card_api', __name__, template_folder='templates')
 
@@ -16,17 +17,24 @@ blueprint = flask.Blueprint('card_api', __name__, template_folder='templates')
 def index():
     return render_template("index.html")
 
+
 @blueprint.route("/profile", methods=['GET', 'POST'])
+@login_required
 def profile():
     return render_template("profile.html")
 
+
 @blueprint.route("/shop", methods=['GET', 'POST'])
+@login_required
 def shop():
     return render_template("shop.html")
 
+
 @blueprint.route("/catalog", methods=['GET', 'POST'])
+@login_required
 def catalog():
     return render_template("catalog.html")
+
 
 @blueprint.route('/add_card', methods=['GET', 'POST'])
 @login_required
@@ -37,7 +45,8 @@ def add_card():
 
         card = Card()
         card.information = request.form['info']
-        tag_id = session.query(Tag).filter(Tag.tag == request.form['tag_sel']).first()
+        tag_id = session.query(Tag).filter(
+            Tag.tag == request.form['tag_sel']).first()
         card.id_tag = tag_id.id
         card.id_creator = current_user.id
         card.img_adress = ""
@@ -48,6 +57,17 @@ def add_card():
         return redirect('/profile')
     return render_template("add_card.html")
 
+
+@blueprint.route("/card_img", methods=['GET', 'POST'])
+@login_required
+def card_img():
+    # img = Card.getAvatar(app)
+    # if not img:
+    #     return ""
+    # else:
+    #     h = make_response(img)
+    #     h.headers['Content-Type'] = 'image/png'
+    return render_template("card_img.html")
 
 # @blueprint.route("/Carding/<int:Card_id>", methods=['GET', 'POST'])
 # def Carding(Card_id):
