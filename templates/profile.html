@@ -98,16 +98,25 @@
                         <th>Описание</th>
                         <th>Статус</th>
                     </tr>
+                <div class="load-work">
+                    <div class="row">
                     {% for item in cards %}
-                    <tr>
-                        <td>{{ item.information }}</td>
-                        {% if item.is_finished == 1 %}
-                        <td>Закрыта</td>
-                        {% else %}
-                        <td>Открыта</td>
-                        {% endif %}
-                    </tr>
+                        
+                            <div class="col-md-4 col-sm-12">
+                                <img src="/static/img/about_img.jpg" class="td-img">
+                            </div>
+                            <div class="col-md-2 col-sm-12">
+                                <div class="col-md-8">{{ item.information }}</div>
+                                {% if item.is_finished == 1 %}
+                                <div class="col-md-8">Закрыта</div>
+                                {% else %}
+                                <div class="col-md-8">Открыта</div>
+                                {% endif %}
+                            </div>
+                        
                     {% endfor %}
+                </div>
+            </div>
                 </table>
             </div>
 
