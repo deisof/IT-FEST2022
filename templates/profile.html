@@ -86,16 +86,16 @@
                     <div class="row">
                     {% for item in cards %}
                             <div class="col-md-4 col-sm-12">
-                                <a href="/show/{{ item.id }}"><button type="button" class="btn offer-cont__btn btn-block col-12">
-                                    Увидеть
+                                <a href="/show/{{ item.id }}"><button type="button" class="offer-cont__btn btn-block-grey col-12">
+                                    Посмотреть
                                 </button></a>
                             </div>
-                            <div class="col-md-2 col-sm-12">
+                            <div class="col-md-8 col-sm-12">
                                 <div class="col-md-8">{{ item.information }}</div>
                                 {% if item.is_finished == 1 %}
                                 <div class="col-md-8">Закрыта</div>
                                 {% else %}
-                                <div class="col-md-8">Открыта</div>
+                                <div class="col-md-8 status-blue">Открыта</div>
                                 {% endif %}
                             </div>
                     {% endfor %}
