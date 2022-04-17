@@ -533,3 +533,11 @@ textarea {
     font-size: 40px;
     padding: 10%;
 }
+
+.td-img {
+    width: 100%;
+}
+
+.load-work {
+    padding: 5%;
+}
