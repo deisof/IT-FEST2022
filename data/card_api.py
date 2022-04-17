@@ -73,7 +73,7 @@ def sample_file_upload(Card_id):
         card = session.query(Card).filter(Card.id == Card_id).first()
         file = request.files['file']
         img = file.read()
-        
+
         binary = sqlite3.Binary(img)
         print(binary)
         card.img_adress = binary
@@ -82,6 +82,16 @@ def sample_file_upload(Card_id):
         return redirect('/profile')
     return render_template("card_img.html")
 
+
+@blueprint.route('/show/<int:Card_id>', methods=['GET'])
+@login_required
+def show(Card_id):
+    session = db_session.create_session()
+    card = session.query(Card).filter(Card.id == Card_id).first()
+    img = card.img_adress
+    h = make_response(img)
+    h.headers['Content-Type'] = 'image/jpg'
+    return h
 
 
 # @blueprint.route("/Carding/<int:Card_id>", methods=['GET', 'POST'])
