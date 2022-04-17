@@ -571,3 +571,7 @@ input[type=file]::file-selector-button {
 .status-blue {
     color: #0d6efd;
 }
+
+.status-red {
+    color: rgb(201, 35, 35);
+}
