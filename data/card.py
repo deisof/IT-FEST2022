@@ -18,16 +18,3 @@ class Card(SqlAlchemyBase):
     user = orm.relation('User')
     id_tag = sqlalchemy.Column(sqlalchemy.Integer, sqlalchemy.ForeignKey("tag.id"))
     tag = orm.relation('Tag')
-
-    def get_img(self):
-        img = None
-        if not self.__card['img_adress']:
-            try:
-                with app.open_resource(app.root_path + url_for('static', filename='img/team_foto.jpg'), "rb") as f:
-                    img = f.read()
-            except FileNotFoundError as e:
-                print("Не найден аватар по умолчанию: "+str(e))
-        else:
-            img = self.__card['img_adress']
- 
-        return img
