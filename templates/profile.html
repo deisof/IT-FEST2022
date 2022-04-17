@@ -49,17 +49,17 @@
             <div class="row list_of_sections">
                 <div class="col-md-4">
                     <div class="item">
-                        <img class="profile-item" src="/static/img/New life back.jpg" alt="work">
+                        <img class="profile-item" src="/static/img/New life back.jpg" onClick="imgsrc1();" id="image1" alt="work">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="item">
-                        <img class="profile-item" src="/static/img/Unique back.jpg" alt="work">
+                        <img class="profile-item" src="/static/img/Unique back.jpg" onClick="imgsrc2();" id="image2" alt="work">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="item">
-                        <img class="profile-item" src="/static/img/Do art back.jpg" alt="work">
+                        <img class="profile-item" src="/static/img/Do art back.jpg" onClick="imgsrc3();" id="image3" alt="work">
                     </div>
                 </div>
             </div>
@@ -85,21 +85,19 @@
                 <div class="load-work">
                     <div class="row">
                     {% for item in cards %}
-                        
-                            <div class="col-md-4 col-sm-12">
-                                <a href="/show/{{ item.id }}"><button type="button" class="btn offer-cont__btn btn-block col-12">
-                                    Увидеть
-                                </button></a>                             
+                            <div class="col-md-4 col-sm-12 mb-2">
+                                <a href="/show/{{ item.id }}"><button type="button" class="offer-cont__btn btn-block-grey col-12">
+                                    Посмотреть
+                                </button></a>
                             </div>
-                            <div class="col-md-2 col-sm-12">
+                            <div class="col-md-8 col-sm-12 mb-2">
                                 <div class="col-md-8">{{ item.information }}</div>
                                 {% if item.is_finished == 1 %}
-                                <div class="col-md-8">Закрыта</div>
+                                <div class="col-md-8 status-red">Закрыта</div>
                                 {% else %}
-                                <div class="col-md-8">Открыта</div>
+                                <div class="col-md-8 status-blue">Открыта</div>
                                 {% endif %}
                             </div>
-                        
                     {% endfor %}
                 </div>
             </div>
@@ -112,13 +110,36 @@
             {% include 'footer.html' %}
         </section>
 
+        <script language="javascript">
+            var i1 = 1;
+            var image1 = document.getElementById("image1");
+            var imgs1 = new Array('/static/img/New life desc.jpg', '/static/img/New life back.jpg');
+            function imgsrc1() {
+                i1++; i1 %= imgs1.length;
+                image1.src = imgs1[i1];
+            };
+            var i2 = 1;
+            var image2 = document.getElementById("image2");
+            var imgs2 = new Array('/static/img/Unique desc.jpg', '/static/img/Unique back.jpg');
+            function imgsrc2() {
+                i2++; i2 %= imgs2.length;
+                image2.src = imgs2[i2];
+            };
+            var i3 = 1;
+            var image3 = document.getElementById("image3");
+            var imgs3 = new Array('/static/img/Do art desc.jpg', '/static/img/Do art back.jpg');
+            function imgsrc3() {
+                i3++; i3 %= imgs3.length;
+                image3.src = imgs3[i3];
+            };
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
-        <script src="../js/jquery-3.6.0.min.js"></script>
-        <script src="../js/owl.carousel.min.js"></script>
-        <script src="../js/main.js"></script>
-</body>
+        <script src="/static/js/jquery-3.6.0.min.js"></script>
+        <script src="/static/js/owl.carousel.min.js"></script>
+        <script src="/static/js/main.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
 
 </html>
