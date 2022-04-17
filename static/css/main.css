@@ -557,3 +557,7 @@ input[type=file]::file-selector-button {
     background: none;
     border: 2px solid #0d6efd;
   }
+
+.add_card {
+    margin-top: -80px;
+}
