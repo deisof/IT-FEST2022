@@ -575,3 +575,70 @@ input[type=file]::file-selector-button {
 .status-red {
     color: rgb(201, 35, 35);
 }
+
+.tracking-in-contract {
+	-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+
+  .flip-scale-up-diag-2 {
+	-webkit-animation: flip-scale-up-diag-2 0.5s linear alternate-reverse both;
+	        animation: flip-scale-up-diag-2 0.5s linear alternate-reverse both;
+}
+
+
+@-webkit-keyframes flip-scale-up-diag-2 {
+    0% {
+      -webkit-transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+              transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+    }
+    50% {
+      -webkit-transform: scale(2.5) rotate3d(-1, 1, 0, 90deg);
+              transform: scale(2.5) rotate3d(-1, 1, 0, 90deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotate3d(-1, 1, 0, 180deg);
+              transform: scale(1) rotate3d(-1, 1, 0, 180deg);
+    }
+  }
+  @keyframes flip-scale-up-diag-2 {
+    0% {
+      -webkit-transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+              transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+    }
+    50% {
+      -webkit-transform: scale(2.5) rotate3d(-1, 1, 0, 90deg);
+              transform: scale(2.5) rotate3d(-1, 1, 0, 90deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotate3d(-1, 1, 0, 180deg);
+              transform: scale(1) rotate3d(-1, 1, 0, 180deg);
+    }
+  }
