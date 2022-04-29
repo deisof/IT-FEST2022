@@ -5,6 +5,7 @@ from flask_restful import Api
 from data import card_api, db_session
 from data import user_api
 from data.users import User
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
@@ -33,6 +34,6 @@ def main():
 
 
 if __name__ == '__main__':
-    # port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 5000))
     main()
-    # app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=80)

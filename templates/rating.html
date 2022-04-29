@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrёshka | Рейтинг</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" href="../static/img/favicon.png" type="image/png">
+
+</head>
+
+<body>
+
+    {% include 'header.html' %}
+
+    <div class="container-fluid profile_information g-0">
+
+    </div>
+        <!-- Work -->
+        <section class="footer">
+            {% include 'footer.html' %}
+        </section>
+
+        <script language="javascript">
+            var i1 = 1;
+            var image1 = document.getElementById("image1");
+            var imgs1 = new Array('/static/img/New life desc.jpg', '/static/img/New life back.jpg');
+            function imgsrc1() {
+                i1++; i1 %= imgs1.length;
+                image1.src = imgs1[i1];
+            };
+            var i2 = 1;
+            var image2 = document.getElementById("image2");
+            var imgs2 = new Array('/static/img/Unique desc.jpg', '/static/img/Unique back.jpg');
+            function imgsrc2() {
+                i2++; i2 %= imgs2.length;
+                image2.src = imgs2[i2];
+            };
+            var i3 = 1;
+            var image3 = document.getElementById("image3");
+            var imgs3 = new Array('/static/img/Do art desc.jpg', '/static/img/Do art back.jpg');
+            function imgsrc3() {
+                i3++; i3 %= imgs3.length;
+                image3.src = imgs3[i3];
+            };
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="/static/js/jquery-3.6.0.min.js"></script>
+        <script src="/static/js/owl.carousel.min.js"></script>
+        <script src="/static/js/main.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+
+</html>
