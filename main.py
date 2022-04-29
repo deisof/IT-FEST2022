@@ -5,6 +5,7 @@ from flask_restful import Api
 from data import card_api, db_session
 from data import user_api
 from data.users import User
+from waitress import serve
 import os
 
 app = Flask(__name__)
@@ -30,10 +31,8 @@ def main():
     def not_found(error):
         return make_response(jsonify({'error': 'Not found'}), 404)
 
-    app.run()
+    serve(app, host='0.0.0.0', port=5000)
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
     main()
-    app.run(host='0.0.0.0', port=80)
