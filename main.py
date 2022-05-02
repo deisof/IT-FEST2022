@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import make_response, jsonify
+from flask import render_template, make_response, jsonify
 from flask_login import LoginManager
 from flask_restful import Api
 from data import card_api, db_session
@@ -29,7 +29,7 @@ def main():
 
     @app.errorhandler(404)
     def not_found(error):
-        return make_response(jsonify({'error': 'Not found'}), 404)
+        return render_template('404.html')
 
     serve(app, host='0.0.0.0', port=5000)
 
