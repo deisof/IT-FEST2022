@@ -13,13 +13,11 @@
 
 ## Table Of Contents
 
-* [About the Project](#about-the-project)
-* [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Authors](#authors)
-* [Acknowledgements](#acknowledgements)
+* [О проекте](#about-the-project)
+* [Встроено с помощью](#built-with)
+* [Начало работы](#getting-started)
+  * [Предварительные условия](#prerequisites)
+  * [Установка](#installation)
 
 ## About The Project
 
