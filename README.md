@@ -18,8 +18,7 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Authors](#authors)
-* [Acknowledgements](#acknowledgements)
+
 ## About The Project
 
 ![Screen Shot](https://psv4.userapi.com/c536236/u382070456/docs/d18/28b3df4997a7/Frame_26.png?extra=8bw9KRxPSe8nCiKytA5Ar02Jgl7RRcl81n9sS2Pp8ff9kv7D0mw_L60pSKFiep5iUyhCsS6pwFlbTayUSq8TiiDavjOU-BbkNb57-HUt04CFE_0y1dB35pAzw9CRBR33GmlsRCrvpYt8pacRWhMhslGH)
