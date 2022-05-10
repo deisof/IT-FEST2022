@@ -11,7 +11,7 @@
 
 
 
-## Table Of Contents
+## Содержание
 
 * [О проекте](#about-the-project)
 * [Встроено с помощью](#built-with)
